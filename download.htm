@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Download Your Planner</title>
+  <style>
+    body { font-family: sans-serif; padding: 40px; }
+    label, select, button { display: block; margin: 20px 0; }
+  </style>
+</head>
+<body>
+  <h1>Download your Calm Scribbles Planner</h1>
+
+  <label for="color">Choose a color:</label>
+  <select id="color">
+    <option value="pink">Pink</option>
+    <option value="green">Green</option>
+  </select>
+
+  <label for="device">Choose your device:</label>
+  <select id="device">
+    <option value="ipad">iPad</option>
+    <option value="android">Android</option>
+  </select>
+
+  <button onclick="downloadFile()">Download</button>
+
+  <script>
+    function downloadFile() {
+      const color = document.getElementById('color').value;
+      const device = document.getElementById('device').value;
+      const fileName = `${color}-${device}.zip`;
+      window.location.href = `downloads/${fileName}`;
+    }
+  </script>
+</body>
+</html>
