@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #e0e7ff, #fdf2f8);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2937;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.thankyou-container {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  padding: 40px 30px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  font-size: 28px;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 22px;
+  color: #4f46e5;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #374151;
+}
+
+.downloads {
+  margin-top: 30px;
+}
+
+.downloads a {
+  display: inline-block;
+  margin: 10px 8px;
+  padding: 12px 24px;
+  background-color: #4f46e5;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.downloads a:hover {
+  background-color: #4338ca;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #9ca3af;
+}
