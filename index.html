@@ -2,25 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Calm Scribbles – Downloads</title>
+  <title>Calm Scribbles - Secure Access</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="thankyou-container">
-    <h1>📂 Downloads</h1>
-    <p>Choose your planner and enter the access code:</p>
 
-    <div class="downloads">
-      <a href="planner2025.html?product=planner2025">📒 Planner 2025</a><br>
-      <a href="planner2026.html?product=planner2026">📓 Planner 2026</a><br>
-      <a href="recipebook.html?product=recipebook">🍰 Recipe Book (Coming Soon)</a><br>
-      <a href="sticker.html">✨ Stickers ZIP File</a><br>
-      <a href="cover.html">📚 Covers ZIP File</a>
+  <div id="login-section">
+    <h1>🔐 Secure Access</h1>
+    <p>Please enter your access code to continue:</p>
+
+    <input type="password" id="accessCode" placeholder="Enter access code">
+    <button onclick="checkAccess()">Unlock</button>
+    <p id="error" class="error"></p>
+  </div>
+
+  <!-- Зөв нууц үг оруулсны дараа гарч ирэх хэсэг -->
+  <div id="content" style="display: none;">
+    <h2>📦 Calm Scribbles Downloads</h2>
+    <p>Thank You for Your Purchase! 🎉</p>
+    <br>
+    <p> We truly appreciate your support and are excited to deliver your product to you.</p> Below, you'll find everything you need to access your download.</p>
+    
+    <div class="download-links">
+      <a href="planner.html">📒 Planner</a>
+      <a href="sticker.html">✨ Sticker</a>
+      <a href="cover.html">📚 Cover</a>
+      <a href="shortcut.html">⚡ Shortcut</a>
     </div>
 
     <footer>
       <p>© Calm Scribbles | All rights reserved.</p>
     </footer>
   </div>
+
+  <script>
+    function checkAccess() {
+      const code = document.getElementById('accessCode').value.trim();
+      const validCode = '2025PLAN';
+      const errorMsg = document.getElementById('error');
+      const loginSection = document.getElementById('login-section');
+      const content = document.getElementById('content');
+
+      if (code === validCode) {
+        loginSection.style.display = 'none'; // Нэвтрэх хэсгийг нуух
+        content.style.display = 'block';     // Гол хэсгийг үзүүлэх
+        errorMsg.textContent = '';
+      } else {
+        content.style.display = 'none';
+        errorMsg.textContent = '❌ Invalid code. Please try again.';
+      }
+    }
+  </script>
+
 </body>
 </html>
